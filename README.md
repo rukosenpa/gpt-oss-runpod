@@ -30,7 +30,7 @@ In **Edit Template → Docker Command**, paste:
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/gpt-oss-runpod/main/setup.sh)"
 ```
 
-The pod starts, downloads the model on first run, and serves automatically on every subsequent restart.
+`runpod/pytorch` uses `/bin/bash` as its entrypoint, so this works directly — no wrapper image needed.
 
 ---
 
@@ -39,7 +39,7 @@ The pod starts, downloads the model on first run, and serves automatically on ev
 | Setting | Value |
 |---|---|
 | GPU | 1 × RTX PRO 6000 Blackwell (96 GB) |
-| Container Image | `runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04` |
+| Container Image | `runpod/pytorch:1.0.3-cu1290-torch291-ubuntu2204` |
 | Container Disk | 40 GB |
 | Volume Disk | **150 GB** at `/workspace` |
 | HTTP Port | `8000` |
