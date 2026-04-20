@@ -20,8 +20,8 @@ echo ""
 source "$VENV_DIR/bin/activate"
 
 huggingface-cli download openai/gpt-oss-120b \
-    --exclude "original/*" "metal/*" \
+    --exclude "original/*" \
+    --exclude "metal/*" \
     --local-dir "$MODEL_DIR" \
-    --local-dir-use-symlinks False
 
 echo "   Download complete."
