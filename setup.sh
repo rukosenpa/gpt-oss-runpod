@@ -1,4 +1,3 @@
-#!/bin/bash
 # GPT-OSS 120B — RunPod setup & launch
 #
 # Paste usage (pod terminal):

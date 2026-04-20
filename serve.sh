@@ -1,4 +1,3 @@
-#!/bin/bash
 # serve.sh — vLLM server launch
 # Sourced by setup.sh, not run directly.
 # Uses exec — replaces the current process. Must be sourced last.

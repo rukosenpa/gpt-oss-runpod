@@ -1,4 +1,3 @@
-#!/bin/bash
 # env.sh — environment variables and guards
 # Sourced by setup.sh, not run directly.
 set -euo pipefail

@@ -1,4 +1,3 @@
-#!/bin/bash
 # download.sh — model weights download
 # Sourced by setup.sh, not run directly.
 set -euo pipefail

@@ -1,4 +1,3 @@
-#!/bin/bash
 # packages.sh — Python environment and package installation
 # Sourced by setup.sh, not run directly.
 set -euo pipefail
