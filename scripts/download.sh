@@ -19,7 +19,7 @@ echo ""
 # Activate venv so huggingface-cli is available
 source "$VENV_DIR/bin/activate"
 
-huggingface-cli download openai/gpt-oss-120b \
+hf download openai/gpt-oss-120b \
     --exclude "original/*" \
     --exclude "metal/*" \
     --local-dir "$MODEL_DIR" \
