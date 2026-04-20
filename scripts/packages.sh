@@ -55,7 +55,7 @@ uv pip install \
 # !! DO NOT install flash-attn (FA2 or FA3) !!
 #    Neither has Blackwell sm_120 kernels. FA3 explicitly excludes sm_120.
 #    See: Dao-AILab/flash-attention issues #1853, #1987
-uv pip install "flashinfer==0.6.3"
+uv pip install "flashinfer-python==0.6.3"
 
 # HuggingFace tooling
 uv pip install \
