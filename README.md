@@ -13,13 +13,13 @@ Tested and documented as of **April 2026**. See [docs/troubleshooting.md](docs/t
 SSH into your pod and run:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/gpt-oss-runpod/main/setup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/rukosenpa/gpt-oss-runpod/main/setup.sh | bash
 ```
 
 Or if `HF_TOKEN` isn't set as a pod env var yet:
 
 ```bash
-HF_TOKEN=hf_xxx bash -c "$(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/gpt-oss-runpod/main/setup.sh)"
+HF_TOKEN=hf_xxx bash -c "$(curl -fsSL https://raw.githubusercontent.com/rukosenpa/gpt-oss-runpod/main/setup.sh)"
 ```
 
 ### Option B — Docker startup command (RunPod template)
@@ -27,7 +27,7 @@ HF_TOKEN=hf_xxx bash -c "$(curl -fsSL https://raw.githubusercontent.com/YOUR_USE
 In **Edit Template → Docker Command**, paste:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/gpt-oss-runpod/main/setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/rukosenpa/gpt-oss-runpod/main/setup.sh)"
 ```
 
 `runpod/pytorch` uses `/bin/bash` as its entrypoint, so this works directly — no wrapper image needed.
