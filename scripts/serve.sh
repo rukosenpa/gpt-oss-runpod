@@ -13,7 +13,7 @@ echo ""
 
 source "$VENV_DIR/bin/activate"
 
-exec vllm serve /workspace/models/gpt-oss-120b \
+exec vllm serve "$MODEL_DIR" \
     --served-model-name gpt-oss-120b \
     --tokenizer openai/gpt-oss-120b \
     --host 0.0.0.0 \
