@@ -31,17 +31,6 @@ export MODEL_DIR="/workspace/models/gpt-oss-120b"
 # Fast HF downloads
 export HF_HUB_ENABLE_HF_TRANSFER=1
 
-# ── SM120 / Blackwell-specific ──
-# CRITICAL: single value with 'f' suffix
-# Multi-arch strings like "12.0f;12.1a" break FlashInfer with "too many values to unpack"
-export FLASHINFER_CUDA_ARCH_LIST=12.0f
-
-# Spawn avoids CUDA fork issues in vLLM multiprocessing
-export VLLM_WORKER_MULTIPROC_METHOD=spawn
-
-# Prevents OOM from memory fragmentation under long sessions
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-
 mkdir -p /workspace/hf-cache /workspace/tmp /workspace/models
 
 echo "   HF_HOME   : $HF_HOME"

@@ -39,11 +39,20 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/gpt-oss-ru
 | Setting | Value |
 |---|---|
 | GPU | 1 × RTX PRO 6000 Blackwell (96 GB) |
-| Container Image | `runpod/pytorch:1.0.3-cu1290-torch291-ubuntu2204` |
+| Container Image | `runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404` |
 | Container Disk | 40 GB |
-| Volume Disk | **150 GB** at `/workspace` |
+| Volume Disk | **100 GB** at `/workspace` |
 | HTTP Port | `8000` |
 | Environment Variable | `HF_TOKEN = hf_xxx` |
+
+
+Other env vars:
+HF_TOKEN="{{ RUNPOD_SECRET_HF_TOKEN }}"
+HUGGING_FACE_HUB_TOKEN="{{ RUNPOD_SECRET_HF_TOKEN }}"
+HF_HOME=/workspace/hf-cache
+HF_HUB_ENABLE_HF_TRANSFER=1
+TMPDIR=/workspace/tmp
+Maybe not all of them are needed
 
 > **Volume is required.** Model weights (~65 GB) and the Python venv are stored on `/workspace` so they survive pod restarts. Without it you re-download 65 GB every time.
 
