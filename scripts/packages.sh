@@ -27,8 +27,8 @@ echo "   Installing packages (first run: ~10 min on fast network)..."
 # PyTorch cu128 — install before vLLM so vLLM doesn't pull its own
 # torch==2.9.1+cu128 supports Blackwell sm_120
 uv pip install \
-    "torch==2.9.1+cu128" \
-    --index-url https://download.pytorch.org/whl/cu128
+    "torch==2.9.1+cu129" \
+    --index-url https://download.pytorch.org/whl/cu129
 
 # vLLM mainline — has native gpt_oss support since v0.10.1
 # !! DO NOT use vllm==0.10.1+gptoss !!
@@ -59,7 +59,7 @@ uv pip install "flashinfer-python==0.6.3"
 
 # HuggingFace tooling
 uv pip install \
-    "huggingface_hub>=1.2.0" \
+    "huggingface_hub==0.36.2" \
     "hf_transfer>=0.1.9" \
     "safetensors>=0.6.1" \
     "tiktoken>=0.12.0"
